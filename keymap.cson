@@ -20,8 +20,7 @@
 # * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
 # * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 
-'atom-workspace atom-text-editor:not([mini])':
-  'shift-enter': 'terminal-status:toggle'
+'atom-workspace':
   'cmd-r': 'run-command:run'
 
 'html':
@@ -32,7 +31,10 @@
 'atom-text-editor.vim-mode.command-mode':
   'U': 'core:redo'
 
-# unset a bunch of stuff (works better from down here)
+'atom-text-editor.vim-mode:not(.insert-mode):not([mini])':
+  'tab': 'vim-mode:bracket-matching-motion'
+
+# unset a bunch of stuff (cause order matters?)
 
 '.platform-darwin atom-text-editor':
   'cmd-r': 'unset!'
@@ -43,3 +45,11 @@
 
 'body':
   'cmd-o': 'unset!'
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  '/': 'unset!'
+
+# end unsetting
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  '/': 'find-and-replace:show'
