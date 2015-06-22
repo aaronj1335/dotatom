@@ -1,0 +1,27 @@
+"*":
+  "exception-reporting":
+    userId: "19344696-5f63-21f5-af84-8c0f78bb28e2"
+  welcome:
+    showOnStartup: false
+  core:
+    audioBeep: false
+    destroyEmptyPanes: false
+    projectHome: "~/code"
+    disabledPackages: [
+      "welcome"
+      "status-bar"
+      "terminal-panel"
+      "terminal-status"
+    ]
+    themes: [
+      "neutron-ui"
+      "neutron-syntax"
+    ]
+  editor:
+    invisibles: {}
+    showLineNumbers: false
+  "status-bar": {}
+  "terminal-status": {}
+  tabs: {}
+  "run-command2": {}
+  "run-command": {}
