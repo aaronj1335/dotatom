@@ -21,8 +21,6 @@
 # * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 
 'atom-workspace atom-text-editor:not([mini])':
-  'cmd-[': 'unset!'
-  'cmd-]': 'unset!'
   'shift-enter': 'terminal-status:toggle'
   'cmd-r': 'run-command:run'
 
@@ -34,5 +32,14 @@
 'atom-text-editor.vim-mode.command-mode':
   'U': 'core:redo'
 
+# unset a bunch of stuff (works better from down here)
+
 '.platform-darwin atom-text-editor':
   'cmd-r': 'unset!'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'cmd-[': 'unset!'
+  'cmd-]': 'unset!'
+
+'body':
+  'cmd-o': 'unset!'

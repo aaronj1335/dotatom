@@ -20,8 +20,15 @@
   editor:
     invisibles: {}
     showLineNumbers: false
+    fontSize: 12
   "status-bar": {}
   "terminal-status": {}
   tabs: {}
   "run-command2": {}
   "run-command": {}
+  linter: {}
+  "atom-ternjs": {}
+  "file-types":
+    mi: "HTML (mason)"
+    m: "HTML (mason)"
+  "linter-jshint": {}
