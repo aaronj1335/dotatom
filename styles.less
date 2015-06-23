@@ -26,4 +26,11 @@ atom-text-editor:not(.mini)::shadow {
   .lines .line .trailing-whitespace {
     background-color: @background-color-warning;
   }
+
+  .lines .line .hard-tab::before {
+    content: "\00bb";
+    position: absolute;
+    pointer-events: none;
+    color: darken(@syntax-invisible-character-color, 40%);
+  }
 }
