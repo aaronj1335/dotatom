@@ -1,11 +1,7 @@
-# Your init script
-#
-# Atom will evaluate this file each time a new window is opened. It is run
-# after packages are loaded/activated and after the previous editor state
-# has been restored.
-#
-# An example hack to log to the console when each text editor is saved.
-#
-# atom.workspace.observeTextEditors (editor) ->
-#   editor.onDidSave ->
-#     console.log "Saved! #{editor.getPath()}"
+setGrammar = (ed)=>
+  if /.mi$/.test(ed.getPath()) or /.m$/.test(ed.getPath())
+    ed.setGrammar(atom.grammars.grammarForScopeName("text.html.mason"))
+
+atom.workspace.observeTextEditors (ed)=>
+  ed.onDidChangePath(setGrammar)
+  setGrammar(ed)
